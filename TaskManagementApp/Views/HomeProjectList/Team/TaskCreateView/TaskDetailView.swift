@@ -41,7 +41,7 @@ struct TaskDetailView: View {
                         Text(status)
                     }
                 }
-                .pickerStyle(.segmented)
+                .pickerStyle(.menu)
                 .onChange(of: selectedStatus, perform: updateStatus)
             }
             Section(header: Text("Timer")) {

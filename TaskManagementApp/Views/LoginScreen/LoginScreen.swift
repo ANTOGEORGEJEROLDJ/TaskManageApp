@@ -22,63 +22,136 @@ struct LoginScreen: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                Text("Login to Task Management App")
-                    .font(.title2)
-                    .bold()
-                    .padding(.top, 50)
-                
-                CustomTextField(icon: "person.fill", placeHolder: "User Name", text: $userName)
-                CustomTextField(icon: "envelope.fill", placeHolder: "Email", text: $email)
-                CustomTextField(icon: "lock.fill", placeHolder: "Password", text: $password)
-                
-                Button("Select Role") {
-                    showRoleSheet = true
-                }
-                .padding()
-                .background(Color.blue.opacity(0.7))
-                .foregroundColor(.white)
-                .cornerRadius(12)
-                
-                if !selectedRole.isEmpty {
-                    Text("Selected Role: \(selectedRole)")
-                        .foregroundColor(.gray)
-                }
-                
-                Button("Login") {
-                    guard !userName.isEmpty && !selectedRole.isEmpty else { return }
-                    session.login(userName: userName, role: selectedRole, email: email)
-                }
-                .disabled(userName.isEmpty || selectedRole.isEmpty)
-                .padding()
-                .background(userName.isEmpty || selectedRole.isEmpty ? Color.gray : Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(12)
-                
-                Spacer()
-            }
-            .padding()
-            .navigationTitle("Login")
-            .sheet(isPresented: $showRoleSheet) {
+            ScrollView{
                 VStack(spacing: 20) {
-                    Text("Select Your Role")
+                    
+                    Image("LoginBackgroundImage")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150)
+                        .padding(.top, -30)
+                    
+                    
+                    Text("Login to Task Management App")
+                        .font(.subheadline)
+                        .bold()
+                        .padding(.top, -30)
+                        .background(Color.black.opacity(0.7))
+                    
+                        Group{
+                            VStack(spacing: 13){
+                            
+                            CustomTextField(icon: "person.fill", placeHolder: "User Name", text: $userName)
+                            CustomTextField(icon: "envelope.fill", placeHolder: "Email", text: $email)
+                            CustomTextField(icon: "lock.fill", placeHolder: "Password", text: $password)
+                            
+                        }
+                            .padding()
+                            .background(Color.white.opacity(0.9))
+                            .cornerRadius(20)
+                            .shadow(radius: 10)
+                            .padding(.horizontal)
+                            .padding(.top, 20)
+                        }.padding(.top, -20)
+                    
+                    Group{
+                        
+                        Button("Select Role") {
+                            showRoleSheet = true
+                        }
+                        .frame(width: 258, height: 22)
+                        .padding()
+                        .bold()
+                        .background(Color.blue.opacity(0.2))
+                        .foregroundColor(.black.opacity(0.7))
                         .font(.headline)
-                        .padding(.top)
-                    Button("Manager") {
-                        selectedRole = "Manager"
-                        showRoleSheet = false
+                        .cornerRadius(15)
+                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
+                        
+                        if !selectedRole.isEmpty {
+                            Text("Selected Role: \(selectedRole)")
+                                .foregroundColor(.gray)
+                        }
+                        
+                        Button("Login") {
+                            guard !userName.isEmpty && !selectedRole.isEmpty else { return }
+                            session.login(userName: userName, role: selectedRole, email: email)
+                        }
+                        .frame(width: 258, height: 22)
+                        .padding()
+                        .bold()
+                        .background(userName.isEmpty || selectedRole.isEmpty ? Color.gray : Color.blue.opacity(0.7))
+                        .foregroundColor(.white)
+                        .disabled(userName.isEmpty || selectedRole.isEmpty)
+                        .font(.headline)
+                        .cornerRadius(15)
+                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
+                                             
+                       
                     }
-                    .buttonStyle(RoleButtonStyle(color: .blue))
-                    
-                    Button("Developer") {
-                        selectedRole = "Developer"
-                        showRoleSheet = false
-                    }
-                    .buttonStyle(RoleButtonStyle(color: .green))
-                    
                     Spacer()
+                    
+                    HStack (spacing: 20){
+                        Button(action: {
+                            
+//                        navigateToHome = true
+                            
+                        }){
+                            Image("google")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 19, height: 19)
+                        }
+                        .frame(width: 70, height: 22)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue.opacity(0.1))
+                        .font(.headline)
+                        .cornerRadius(15)
+                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
+                        
+                        
+                        Button(action:{
+//                            navigateToHome = true
+                            
+                        }){
+                            Image("apple")
+                                .resizable()
+                                .scaledToFit()
+                            
+                        }
+                        .frame(width: 70, height: 22)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue.opacity(0.1))
+                        .font(.headline)
+                        .cornerRadius(15)
+                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
+                    }.padding(.top,-30)
                 }
                 .padding()
+                .navigationTitle("Login")
+                .sheet(isPresented: $showRoleSheet) {
+                    VStack(spacing: 20) {
+                        Text("Select Your Role")
+                            .font(.headline)
+                            .padding(.top)
+                        Button("Manager") {
+                            selectedRole = "Manager"
+                            showRoleSheet = false
+                        }
+                        .buttonStyle(RoleButtonStyle(color: .blue))
+                        
+                        Button("Team") {
+                            selectedRole = "Team"
+                            showRoleSheet = false
+                        }
+                        .buttonStyle(RoleButtonStyle(color: .green))
+                        
+                        Spacer()
+                    }
+                    .padding()
+                }
             }
         }
     }
@@ -94,5 +167,14 @@ struct RoleButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .cornerRadius(12)
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
+    }
+}
+
+
+struct LoginScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginScreen()
+            .environmentObject(SessionManager())
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

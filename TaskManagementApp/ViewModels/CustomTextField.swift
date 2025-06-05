@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// MARK: - CustomTextField (from your code)
 struct CustomTextField: View {
     var icon: String
     var placeHolder: String
@@ -18,12 +17,17 @@ struct CustomTextField: View {
             Image(systemName: icon)
                 .foregroundColor(.gray)
                 .frame(width: 30)
-            TextField(placeHolder, text: $text)
-                .autocapitalization(.none)
-                .disableAutocorrection(true)
+            
+            if placeHolder.lowercased().contains("password") {
+                SecureField(placeHolder, text: $text)
+            } else {
+                TextField(placeHolder, text: $text)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+            }
         }
         .padding()
-        .background(Color.white.opacity(0.8))
-        .cornerRadius(12)
+        .background(Color.gray.opacity(0.1))
+        .cornerRadius(10)
     }
 }
