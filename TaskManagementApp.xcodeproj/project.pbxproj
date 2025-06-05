@@ -11,7 +11,7 @@
 		4E1FA00B2DF173B700254457 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0042DF173B700254457 /* ContentView.swift */; };
 		4E1FA00C2DF173B700254457 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0052DF173B700254457 /* CustomTextField.swift */; };
 		4E1FA00D2DF173B700254457 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0062DF173B700254457 /* LoginScreen.swift */; };
-		4E1FA00E2DF173B700254457 /* profileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0072DF173B700254457 /* profileScreen.swift */; };
+		4E1FA00E2DF173B700254457 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0072DF173B700254457 /* ProfileView.swift */; };
 		4E1FA00F2DF173B700254457 /* TaskManagementAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0082DF173B700254457 /* TaskManagementAppApp.swift */; };
 		4E1FA0112DF173F100254457 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0102DF173F100254457 /* NotificationManager.swift */; };
 		4E1FA0132DF1740400254457 /* TimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0122DF1740400254457 /* TimeTracker.swift */; };
@@ -50,7 +50,7 @@
 		4E1FA0042DF173B700254457 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4E1FA0052DF173B700254457 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		4E1FA0062DF173B700254457 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
-		4E1FA0072DF173B700254457 /* profileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileScreen.swift; sourceTree = "<group>"; };
+		4E1FA0072DF173B700254457 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4E1FA0082DF173B700254457 /* TaskManagementAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagementAppApp.swift; sourceTree = "<group>"; };
 		4E1FA0102DF173F100254457 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		4E1FA0122DF1740400254457 /* TimeTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTracker.swift; sourceTree = "<group>"; };
@@ -125,9 +125,7 @@
 		4E1F9FFD2DF173B700254457 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4E1FA0082DF173B700254457 /* TaskManagementAppApp.swift */,
 				4E1FA0202DF179E700254457 /* CoreData */,
-				4E1FA02E2DF18B8500254457 /* MainTabView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -152,6 +150,7 @@
 		4E1FA0012DF173B700254457 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4E1FA02E2DF18B8500254457 /* MainTabView.swift */,
 				4E1FA0042DF173B700254457 /* ContentView.swift */,
 				4E1FA0052DF173B700254457 /* CustomTextField.swift */,
 			);
@@ -161,10 +160,9 @@
 		4E1FA0022DF173B700254457 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4E1FA01D2DF1784600254457 /* HomeProjectList */,
 				4E1FA0162DF1743A00254457 /* LoginScreen */,
-				4E1FA01C2DF1782800254457 /* TaskCreateView */,
-				4E1FA0072DF173B700254457 /* profileScreen.swift */,
+				4E1FA01D2DF1784600254457 /* HomeProjectList */,
+				4E1FA0072DF173B700254457 /* ProfileView.swift */,
 				4E1FA0262DF185B300254457 /* TaskHistoryView.swift */,
 			);
 			path = Views;
@@ -173,6 +171,7 @@
 		4E1FA0092DF173B700254457 /* TaskManagementApp */ = {
 			isa = PBXGroup;
 			children = (
+				4E1FA0082DF173B700254457 /* TaskManagementAppApp.swift */,
 				4E1F9FFD2DF173B700254457 /* Models */,
 				4E1FA0022DF173B700254457 /* Views */,
 				4E1FA0012DF173B700254457 /* ViewModels */,
@@ -203,6 +202,7 @@
 		4E1FA01D2DF1784600254457 /* HomeProjectList */ = {
 			isa = PBXGroup;
 			children = (
+				4E1FA0302DF1961800254457 /* Team */,
 				4E1FA0252DF1825F00254457 /* Manager */,
 			);
 			path = HomeProjectList;
@@ -223,6 +223,14 @@
 				4E1FA01E2DF1787200254457 /* ProjectListView.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		4E1FA0302DF1961800254457 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				4E1FA01C2DF1782800254457 /* TaskCreateView */,
+			);
+			path = Team;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,7 +386,7 @@
 				4E1FA00C2DF173B700254457 /* CustomTextField.swift in Sources */,
 				4E1FA00D2DF173B700254457 /* LoginScreen.swift in Sources */,
 				4E1FA0192DF1754A00254457 /* CoreDataModel.xcdatamodeld in Sources */,
-				4E1FA00E2DF173B700254457 /* profileScreen.swift in Sources */,
+				4E1FA00E2DF173B700254457 /* ProfileView.swift in Sources */,
 				4E1FA0132DF1740400254457 /* TimeTracker.swift in Sources */,
 				4E1FA00F2DF173B700254457 /* TaskManagementAppApp.swift in Sources */,
 				4E1FA02F2DF18B8500254457 /* MainTabView.swift in Sources */,

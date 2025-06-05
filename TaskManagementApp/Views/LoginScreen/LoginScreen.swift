@@ -47,7 +47,7 @@ struct LoginScreen: View {
                 
                 Button("Login") {
                     guard !userName.isEmpty && !selectedRole.isEmpty else { return }
-                    session.login(userName: userName, role: selectedRole)
+                    session.login(userName: userName, role: selectedRole, email: email)
                 }
                 .disabled(userName.isEmpty || selectedRole.isEmpty)
                 .padding()

@@ -19,24 +19,27 @@ struct TaskManagementApp: App {
             if session.isLoggedIn {
                 MainTabView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                    .environmentObject(session)
+                    .environmentObject(session)  // inject once here
             } else {
                 LoginScreen()
-                    .environmentObject(session)
+                    .environmentObject(session)  // inject here too
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }
     }
 }
 
+
 final class SessionManager: ObservableObject {
     @Published var isLoggedIn = false
     @Published var role = ""
+    @Published var email = ""
     @Published var userName = ""
     
-    func login(userName: String, role: String) {
+    func login(userName: String, role: String, email: String) {
         self.userName = userName
         self.role = role
+        self.email = email
         self.isLoggedIn = true
     }
     
@@ -44,5 +47,6 @@ final class SessionManager: ObservableObject {
         self.isLoggedIn = false
         self.role = ""
         self.userName = ""
+        self.email = ""
     }
 }

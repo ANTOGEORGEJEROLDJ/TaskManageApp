@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - MainTabView (After login)
 struct MainTabView: View {
-    @EnvironmentObject var session: SessionManager
+    @EnvironmentObject var session: SessionManager  // or UserSessionManager if you renamed it
     
     var body: some View {
         TabView {
@@ -34,6 +34,14 @@ struct MainTabView: View {
             }
             .tabItem {
                 Label("Task History", systemImage: "clock")
+            }
+            
+            NavigationView {
+                ProfileView()
+                .environmentObject(session)
+            }
+            .tabItem {
+                Label("Profile", systemImage: "person.crop.circle")
             }
         }
     }
