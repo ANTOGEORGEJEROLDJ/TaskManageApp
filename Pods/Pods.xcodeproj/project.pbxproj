@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C6969ADB82EF315F2DBC7742B27D02F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		72539792AE412B82F8294BE101FA0202 /* Pods-TaskManagementAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B64DBDBA48A89F1A3EA74EDA6440D23A /* Pods-TaskManagementAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82E56BF04D8C6F62D3417CCF48AFC6B5 /* Pods-TaskManagementAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D5EB05ABBFE3C39A495BDE624A03AE /* Pods-TaskManagementAppTests-dummy.m */; };
+		8F6D732A7D3E85D3D89529EA9DA49C0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		A1649401B6EEC1457543AC5AB75F6B3B /* Pods-TaskManagementApp-TaskManagementAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 368443A466534797DB14C378C74BE886 /* Pods-TaskManagementApp-TaskManagementAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1AF365A15A4AE04F4DAA54C3ADE5A5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		B70453DC58E155C64D62AFDC7CEE5504 /* Pods-TaskManagementApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4551A936C9BD3D32D7A77328D0FC07B5 /* Pods-TaskManagementApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE31181BAC216BA319164830D61FF396 /* Pods-TaskManagementApp-TaskManagementAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C7BABD6676DD039CF6F94AF4D6CFC6 /* Pods-TaskManagementApp-TaskManagementAppUITests-dummy.m */; };
+		D08C4AAA5071EAA04617808E7A1A758F /* Pods-TaskManagementApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B222538748A31AB59E2856469763181 /* Pods-TaskManagementApp-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6BA34032AF8D66BCF7B7C0FE7E2364D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A9CB6159FF0EC222A7C4CAFEBDDF1BE;
+			remoteInfo = "Pods-TaskManagementApp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F092273652C1225CA264D4686E4593 /* Pods-TaskManagementApp-TaskManagementAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaskManagementApp-TaskManagementAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0CA75B2487A85E0A738EC225A753E5B6 /* Pods-TaskManagementApp-TaskManagementAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaskManagementApp-TaskManagementAppUITests.modulemap"; sourceTree = "<group>"; };
+		1B222538748A31AB59E2856469763181 /* Pods-TaskManagementApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaskManagementApp-dummy.m"; sourceTree = "<group>"; };
+		25937A9F25BCD3EE673340E23A28264A /* Pods-TaskManagementApp-TaskManagementAppUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaskManagementApp-TaskManagementAppUITests-Info.plist"; sourceTree = "<group>"; };
+		299546C4D5C6988B98D19A20A1F78DD9 /* Pods-TaskManagementApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaskManagementApp.modulemap"; sourceTree = "<group>"; };
+		2A4DEE71B1B221E3E8A4EA5DD5A26152 /* Pods-TaskManagementAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaskManagementAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		368443A466534797DB14C378C74BE886 /* Pods-TaskManagementApp-TaskManagementAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaskManagementApp-TaskManagementAppUITests-umbrella.h"; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3BEC647E8D3CCFB0B2A61F5C6CFFA0FD /* Pods-TaskManagementAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaskManagementAppTests.modulemap"; sourceTree = "<group>"; };
+		3C0F2AC09A06E85FE3D09B8E678A60AC /* Pods-TaskManagementApp-TaskManagementAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaskManagementApp-TaskManagementAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E3E72A608A434FB67226813BBB95E6E /* Pods-TaskManagementApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaskManagementApp-Info.plist"; sourceTree = "<group>"; };
+		4551A936C9BD3D32D7A77328D0FC07B5 /* Pods-TaskManagementApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaskManagementApp-umbrella.h"; sourceTree = "<group>"; };
+		4668547E1F64DF1263E3AF81EF30CB3F /* Pods-TaskManagementApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TaskManagementApp"; path = Pods_TaskManagementApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		471082927D8A4379C7034731E3527372 /* Pods-TaskManagementApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaskManagementApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		56B23C21C1674F2301C049528D79F325 /* Pods-TaskManagementAppTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaskManagementAppTests-Info.plist"; sourceTree = "<group>"; };
+		5D4EE8AA7C7E8AB9910ECEADDC530C9C /* Pods-TaskManagementApp-TaskManagementAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskManagementApp-TaskManagementAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		62D56CA123E8F3D4B260FE9E653CD34A /* Pods-TaskManagementApp-TaskManagementAppUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TaskManagementApp-TaskManagementAppUITests"; path = Pods_TaskManagementApp_TaskManagementAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62E1DDFAF02D6221DDA466C69DBAB13D /* Pods-TaskManagementApp-TaskManagementAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskManagementApp-TaskManagementAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		73D5EB05ABBFE3C39A495BDE624A03AE /* Pods-TaskManagementAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaskManagementAppTests-dummy.m"; sourceTree = "<group>"; };
+		8438E8C83FC20A64F5E70D2019A0A60B /* Pods-TaskManagementApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskManagementApp.debug.xcconfig"; sourceTree = "<group>"; };
+		90C7BABD6676DD039CF6F94AF4D6CFC6 /* Pods-TaskManagementApp-TaskManagementAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaskManagementApp-TaskManagementAppUITests-dummy.m"; sourceTree = "<group>"; };
+		9686BC7D02779ABD009AD384E46BC1A4 /* Pods-TaskManagementAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaskManagementAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AAC30F4D442A5094BE4FC0F87298AF6E /* Pods-TaskManagementApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskManagementApp.release.xcconfig"; sourceTree = "<group>"; };
+		B07155977CF9C38F8176859B6509EAA4 /* Pods-TaskManagementAppTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TaskManagementAppTests"; path = Pods_TaskManagementAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B64DBDBA48A89F1A3EA74EDA6440D23A /* Pods-TaskManagementAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaskManagementAppTests-umbrella.h"; sourceTree = "<group>"; };
+		C03D3D22E91721B509235A3F4C9EDFB3 /* Pods-TaskManagementAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskManagementAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E038ABB928B8F212B2F72EEECF77CA17 /* Pods-TaskManagementAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskManagementAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		E716322343EE24B220BCE02197474D9D /* Pods-TaskManagementApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaskManagementApp-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1988DC544425993BC98B0714D702D65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F6D732A7D3E85D3D89529EA9DA49C0D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE612A844C18FF95ACAA0178292AB67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1AF365A15A4AE04F4DAA54C3ADE5A5A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1D56233C72AD4AC7E3098A5B2E1AC33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6969ADB82EF315F2DBC7742B27D02F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01849F6D046E8553807E37F7F8E3A424 /* Pods-TaskManagementApp-TaskManagementAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0CA75B2487A85E0A738EC225A753E5B6 /* Pods-TaskManagementApp-TaskManagementAppUITests.modulemap */,
+				3C0F2AC09A06E85FE3D09B8E678A60AC /* Pods-TaskManagementApp-TaskManagementAppUITests-acknowledgements.markdown */,
+				01F092273652C1225CA264D4686E4593 /* Pods-TaskManagementApp-TaskManagementAppUITests-acknowledgements.plist */,
+				90C7BABD6676DD039CF6F94AF4D6CFC6 /* Pods-TaskManagementApp-TaskManagementAppUITests-dummy.m */,
+				25937A9F25BCD3EE673340E23A28264A /* Pods-TaskManagementApp-TaskManagementAppUITests-Info.plist */,
+				368443A466534797DB14C378C74BE886 /* Pods-TaskManagementApp-TaskManagementAppUITests-umbrella.h */,
+				62E1DDFAF02D6221DDA466C69DBAB13D /* Pods-TaskManagementApp-TaskManagementAppUITests.debug.xcconfig */,
+				5D4EE8AA7C7E8AB9910ECEADDC530C9C /* Pods-TaskManagementApp-TaskManagementAppUITests.release.xcconfig */,
+			);
+			name = "Pods-TaskManagementApp-TaskManagementAppUITests";
+			path = "Target Support Files/Pods-TaskManagementApp-TaskManagementAppUITests";
+			sourceTree = "<group>";
+		};
+		08341FA061300B417E76C74B2F36231D /* Pods-TaskManagementAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BEC647E8D3CCFB0B2A61F5C6CFFA0FD /* Pods-TaskManagementAppTests.modulemap */,
+				9686BC7D02779ABD009AD384E46BC1A4 /* Pods-TaskManagementAppTests-acknowledgements.markdown */,
+				2A4DEE71B1B221E3E8A4EA5DD5A26152 /* Pods-TaskManagementAppTests-acknowledgements.plist */,
+				73D5EB05ABBFE3C39A495BDE624A03AE /* Pods-TaskManagementAppTests-dummy.m */,
+				56B23C21C1674F2301C049528D79F325 /* Pods-TaskManagementAppTests-Info.plist */,
+				B64DBDBA48A89F1A3EA74EDA6440D23A /* Pods-TaskManagementAppTests-umbrella.h */,
+				C03D3D22E91721B509235A3F4C9EDFB3 /* Pods-TaskManagementAppTests.debug.xcconfig */,
+				E038ABB928B8F212B2F72EEECF77CA17 /* Pods-TaskManagementAppTests.release.xcconfig */,
+			);
+			name = "Pods-TaskManagementAppTests";
+			path = "Target Support Files/Pods-TaskManagementAppTests";
+			sourceTree = "<group>";
+		};
+		6B6392DE9BE1ADED93DD0CD914C4FE39 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8395199012C81941952402AC066775E /* Pods-TaskManagementApp */,
+				01849F6D046E8553807E37F7F8E3A424 /* Pods-TaskManagementApp-TaskManagementAppUITests */,
+				08341FA061300B417E76C74B2F36231D /* Pods-TaskManagementAppTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		96BB351573B9D72063CE4C0865F0DEF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4668547E1F64DF1263E3AF81EF30CB3F /* Pods-TaskManagementApp */,
+				62D56CA123E8F3D4B260FE9E653CD34A /* Pods-TaskManagementApp-TaskManagementAppUITests */,
+				B07155977CF9C38F8176859B6509EAA4 /* Pods-TaskManagementAppTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8395199012C81941952402AC066775E /* Pods-TaskManagementApp */ = {
+			isa = PBXGroup;
+			children = (
+				299546C4D5C6988B98D19A20A1F78DD9 /* Pods-TaskManagementApp.modulemap */,
+				471082927D8A4379C7034731E3527372 /* Pods-TaskManagementApp-acknowledgements.markdown */,
+				E716322343EE24B220BCE02197474D9D /* Pods-TaskManagementApp-acknowledgements.plist */,
+				1B222538748A31AB59E2856469763181 /* Pods-TaskManagementApp-dummy.m */,
+				3E3E72A608A434FB67226813BBB95E6E /* Pods-TaskManagementApp-Info.plist */,
+				4551A936C9BD3D32D7A77328D0FC07B5 /* Pods-TaskManagementApp-umbrella.h */,
+				8438E8C83FC20A64F5E70D2019A0A60B /* Pods-TaskManagementApp.debug.xcconfig */,
+				AAC30F4D442A5094BE4FC0F87298AF6E /* Pods-TaskManagementApp.release.xcconfig */,
+			);
+			name = "Pods-TaskManagementApp";
+			path = "Target Support Files/Pods-TaskManagementApp";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				96BB351573B9D72063CE4C0865F0DEF7 /* Products */,
+				6B6392DE9BE1ADED93DD0CD914C4FE39 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1777FF8D2E8588B938936C16ED3AFE38 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72539792AE412B82F8294BE101FA0202 /* Pods-TaskManagementAppTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3557E692AC5862C008E61E5EEE9F3A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1649401B6EEC1457543AC5AB75F6B3B /* Pods-TaskManagementApp-TaskManagementAppUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0CBAA2D9FEAAC21B9F8CC55F2D318B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70453DC58E155C64D62AFDC7CEE5504 /* Pods-TaskManagementApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9A9CB6159FF0EC222A7C4CAFEBDDF1BE /* Pods-TaskManagementApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83626DFE584D195A4AC38D224C3E5BD /* Build configuration list for PBXNativeTarget "Pods-TaskManagementApp" */;
+			buildPhases = (
+				F0CBAA2D9FEAAC21B9F8CC55F2D318B3 /* Headers */,
+				601EE53DC81E1FA1CC8790D686A7011C /* Sources */,
+				ABE612A844C18FF95ACAA0178292AB67 /* Frameworks */,
+				70536B2345FE6F732DAD441FF812C3D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TaskManagementApp";
+			productName = Pods_TaskManagementApp;
+			productReference = 4668547E1F64DF1263E3AF81EF30CB3F /* Pods-TaskManagementApp */;
+			productType = "com.apple.product-type.framework";
+		};
+		F8380236054588DDB3B5A81DC2096D05 /* Pods-TaskManagementApp-TaskManagementAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3CEE710EAEAC30139952788646B2D12 /* Build configuration list for PBXNativeTarget "Pods-TaskManagementApp-TaskManagementAppUITests" */;
+			buildPhases = (
+				C3557E692AC5862C008E61E5EEE9F3A0 /* Headers */,
+				1947A3E19CA720B01E609DCBEF9DD3FA /* Sources */,
+				B1D56233C72AD4AC7E3098A5B2E1AC33 /* Frameworks */,
+				1FDECFEC1E9B31DE4C5C0A5782753B48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TaskManagementApp-TaskManagementAppUITests";
+			productName = Pods_TaskManagementApp_TaskManagementAppUITests;
+			productReference = 62D56CA123E8F3D4B260FE9E653CD34A /* Pods-TaskManagementApp-TaskManagementAppUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF51FE77487CE1781D592BFCB743C2C6 /* Pods-TaskManagementAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D7A753CA0BD812E40216B10CAA448E1 /* Build configuration list for PBXNativeTarget "Pods-TaskManagementAppTests" */;
+			buildPhases = (
+				1777FF8D2E8588B938936C16ED3AFE38 /* Headers */,
+				95C08CF30DFBB033183DE1E7E39A0939 /* Sources */,
+				A1988DC544425993BC98B0714D702D65 /* Frameworks */,
+				152D6C5841C41E3811E95A517A06D470 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D3585E821F5722E9EEDCE231A549168 /* PBXTargetDependency */,
+			);
+			name = "Pods-TaskManagementAppTests";
+			productName = Pods_TaskManagementAppTests;
+			productReference = B07155977CF9C38F8176859B6509EAA4 /* Pods-TaskManagementAppTests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 96BB351573B9D72063CE4C0865F0DEF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A9CB6159FF0EC222A7C4CAFEBDDF1BE /* Pods-TaskManagementApp */,
+				F8380236054588DDB3B5A81DC2096D05 /* Pods-TaskManagementApp-TaskManagementAppUITests */,
+				FF51FE77487CE1781D592BFCB743C2C6 /* Pods-TaskManagementAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		152D6C5841C41E3811E95A517A06D470 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDECFEC1E9B31DE4C5C0A5782753B48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70536B2345FE6F732DAD441FF812C3D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1947A3E19CA720B01E609DCBEF9DD3FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE31181BAC216BA319164830D61FF396 /* Pods-TaskManagementApp-TaskManagementAppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		601EE53DC81E1FA1CC8790D686A7011C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08C4AAA5071EAA04617808E7A1A758F /* Pods-TaskManagementApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C08CF30DFBB033183DE1E7E39A0939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E56BF04D8C6F62D3417CCF48AFC6B5 /* Pods-TaskManagementAppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D3585E821F5722E9EEDCE231A549168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TaskManagementApp";
+			target = 9A9CB6159FF0EC222A7C4CAFEBDDF1BE /* Pods-TaskManagementApp */;
+			targetProxy = A6BA34032AF8D66BCF7B7C0FE7E2364D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1AA69BA167B09AE24324DAFF01E7CE78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E038ABB928B8F212B2F72EEECF77CA17 /* Pods-TaskManagementAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-TaskManagementAppTests/Pods-TaskManagementAppTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaskManagementAppTests/Pods-TaskManagementAppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2B7782F0686B51E1DDE0A10A967DDDAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D4EE8AA7C7E8AB9910ECEADDC530C9C /* Pods-TaskManagementApp-TaskManagementAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-TaskManagementApp-TaskManagementAppUITests/Pods-TaskManagementApp-TaskManagementAppUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaskManagementApp-TaskManagementAppUITests/Pods-TaskManagementApp-TaskManagementAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4EA12D900426C27AAA330AC92CC9B2AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62E1DDFAF02D6221DDA466C69DBAB13D /* Pods-TaskManagementApp-TaskManagementAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-TaskManagementApp-TaskManagementAppUITests/Pods-TaskManagementApp-TaskManagementAppUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaskManagementApp-TaskManagementAppUITests/Pods-TaskManagementApp-TaskManagementAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A3CA710B05DD0D38FF0C61760F3B99FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A78D0CEE7B70D0EE2DD1B14A7751CF23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C03D3D22E91721B509235A3F4C9EDFB3 /* Pods-TaskManagementAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-TaskManagementAppTests/Pods-TaskManagementAppTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaskManagementAppTests/Pods-TaskManagementAppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B375DB5F6539817974060D248DD7CA5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAC30F4D442A5094BE4FC0F87298AF6E /* Pods-TaskManagementApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-TaskManagementApp/Pods-TaskManagementApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaskManagementApp/Pods-TaskManagementApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2364721D6682F8B9E80045232309A09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EE36F654F46B26FF8A13FF4FEE1CA0B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8438E8C83FC20A64F5E70D2019A0A60B /* Pods-TaskManagementApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-TaskManagementApp/Pods-TaskManagementApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaskManagementApp/Pods-TaskManagementApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3CA710B05DD0D38FF0C61760F3B99FB /* Debug */,
+				E2364721D6682F8B9E80045232309A09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D7A753CA0BD812E40216B10CAA448E1 /* Build configuration list for PBXNativeTarget "Pods-TaskManagementAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A78D0CEE7B70D0EE2DD1B14A7751CF23 /* Debug */,
+				1AA69BA167B09AE24324DAFF01E7CE78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3CEE710EAEAC30139952788646B2D12 /* Build configuration list for PBXNativeTarget "Pods-TaskManagementApp-TaskManagementAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EA12D900426C27AAA330AC92CC9B2AC /* Debug */,
+				2B7782F0686B51E1DDE0A10A967DDDAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D83626DFE584D195A4AC38D224C3E5BD /* Build configuration list for PBXNativeTarget "Pods-TaskManagementApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE36F654F46B26FF8A13FF4FEE1CA0B6 /* Debug */,
+				B375DB5F6539817974060D248DD7CA5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

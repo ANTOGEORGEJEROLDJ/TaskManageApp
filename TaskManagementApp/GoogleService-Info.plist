@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>409207109100-l0fcom2t767t4dupq5f7sg0b5vqmesoq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.409207109100-l0fcom2t767t4dupq5f7sg0b5vqmesoq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAlqP2k3WnGVnWNLSUsN2UOLL-TnpGobFo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>409207109100</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.JustCheck.TaskManagementApp</string>
+	<key>PROJECT_ID</key>
+	<string>taskmanagemantapp-5fe54</string>
+	<key>STORAGE_BUCKET</key>
+	<string>taskmanagemantapp-5fe54.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:409207109100:ios:d7b13b4b9c5b9d96c63cc9</string>
+</dict>
+</plist>

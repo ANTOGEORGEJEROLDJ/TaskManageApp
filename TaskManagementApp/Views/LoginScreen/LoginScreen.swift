@@ -4,9 +4,15 @@
 //
 //  Created by Paranjothi iOS MacBook Pro on 05/06/25.
 //
-
+import GoogleSignIn
+import GoogleSignInSwift
 import SwiftUI
 import CoreData
+import FirebaseCore
+import FirebaseAuth
+import AuthenticationServices
+import CryptoKit
+
 
 // MARK: - LoginScreen
 struct LoginScreen: View {
@@ -19,6 +25,11 @@ struct LoginScreen: View {
     @State private var password = ""
     @State private var selectedRole = ""
     @State private var showRoleSheet = false
+    @State private var errorMessage = ""
+    @State private var isAuthenticated = false
+    @State private var isSignedIn = false
+    
+    private let appleLoginManager = AppleSignInManager()
     
     var body: some View {
         NavigationView {
@@ -92,42 +103,50 @@ struct LoginScreen: View {
                     Spacer()
                     
                     HStack (spacing: 20){
-                        Button(action: {
-                            
-//                        navigateToHome = true
-                            
-                        }){
-                            Image("google")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 19, height: 19)
-                        }
-                        .frame(width: 70, height: 22)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.blue.opacity(0.1))
-                        .font(.headline)
-                        .cornerRadius(15)
-                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
                         
-                        
-                        Button(action:{
-//                            navigateToHome = true
-                            
-                        }){
-                            Image("apple")
-                                .resizable()
-                                .scaledToFit()
-                            
+                        NavigationLink(destination: MainTabView(), isActive: $isSignedIn) {
+                            EmptyView()
                         }
-                        .frame(width: 70, height: 22)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.blue.opacity(0.1))
-                        .font(.headline)
-                        .cornerRadius(15)
-                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
-                    }.padding(.top,-30)
+
+                            Button(action: {
+                                
+                                handleSignIn()
+                                
+                            }){
+                                Image("google")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 19, height: 19)
+                            }
+                            .frame(width: 70, height: 22)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.blue.opacity(0.1))
+                            .font(.headline)
+                            .cornerRadius(15)
+                            .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
+                            
+                            
+                            Button(action:{
+                                
+                                appleLoginManager.startSignInWithAppleFlow()
+
+                                
+                            }){
+                                Image("apple")
+                                    .resizable()
+                                    .scaledToFit()
+                                
+                            }
+                            .frame(width: 70, height: 22)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.blue.opacity(0.1))
+                            .font(.headline)
+                            .cornerRadius(15)
+                            .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
+                        }.padding(.top,-30)
+                    
                 }
                 .padding()
                 .navigationTitle("Login")
@@ -155,6 +174,56 @@ struct LoginScreen: View {
             }
         }
     }
+    func handleSignIn() {
+        guard let clientID = FirebaseApp.app()?.options.clientID else {
+            errorMessage = "Missing Firebase Client ID"
+            return
+        }
+
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let rootVC = windowScene.windows.first?.rootViewController else {
+            errorMessage = "No rootViewController available"
+            return
+        }
+
+
+        GIDSignIn.sharedInstance.signIn(withPresenting: rootVC) { result, error in
+            if let error = error {
+                self.errorMessage = "Google Sign-In failed: \(error.localizedDescription)"
+                return
+            }
+
+            guard let result = result else {
+                self.errorMessage = "Sign-in result was nil"
+                return
+            }
+
+            guard let idToken = result.user.idToken?.tokenString else {
+                self.errorMessage = "Missing ID Token"
+                return
+            }
+
+            let accessToken = result.user.accessToken.tokenString
+
+            let credential = GoogleAuthProvider.credential(
+                withIDToken: idToken,
+                accessToken: accessToken
+            )
+
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let error = error {
+                    self.errorMessage = "Firebase Sign-In failed: \(error.localizedDescription)"
+                } else {
+                    self.isSignedIn = true
+                    print("Firebase Sign-In Success: \(authResult?.user.email ?? "No Email")")
+                }
+            }
+        }
+    }
+ 
 }
 
 struct RoleButtonStyle: ButtonStyle {
