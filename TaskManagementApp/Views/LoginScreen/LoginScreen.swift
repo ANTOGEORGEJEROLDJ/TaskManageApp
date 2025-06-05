@@ -39,11 +39,11 @@ struct LoginScreen: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 150, height: 150)
-
+                    
                     Text("Login to Task Management App")
                         .font(.title2)
                         .bold()
-
+                    
                     Group{
                         VStack (spacing: 15){
                             CustomTextField(icon: "person.fill", placeHolder: "UserName", text: $userName)
@@ -57,7 +57,7 @@ struct LoginScreen: View {
                         .padding(.horizontal)
                         .padding(.top, 20)
                     }
-
+                    
                     Button("Select Role") {
                         showRoleSheet = true
                     }
@@ -65,22 +65,22 @@ struct LoginScreen: View {
                     .padding()
                     .background(Color.blue.opacity(0.2))
                     .cornerRadius(12)
-
+                    
                     if !selectedRole.isEmpty {
                         Text("Selected Role: \(selectedRole)")
                             .foregroundColor(.gray)
                     }
-
+                    
                     Button("Login") {
                         guard !userName.isEmpty && !selectedRole.isEmpty else { return }
                         session.login(userName: userName, role: selectedRole, email: email)
                     }
                     .frame(width: 250)
                     .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
+                    .background(Color.blue.opacity(0.3))
+                    .foregroundColor(.black.opacity(0.8))
                     .cornerRadius(12)
-
+                    
                     HStack(spacing: 20) {
                         Button(action: {
                             handleGoogleSignIn()
@@ -89,10 +89,14 @@ struct LoginScreen: View {
                                 .resizable()
                                 .frame(width: 32, height: 32)
                         }
-                        .frame(width: 60, height: 60)
-                        .background(Color.white)
-                        .cornerRadius(12)
-
+                        .frame(width: 70, height: 22)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue.opacity(0.1))
+                        .font(.headline)
+                        .cornerRadius(15)
+                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
+                        
                         Button(action: {
                             appleLoginManager.startSignInWithAppleFlow()
                         }) {
@@ -100,17 +104,21 @@ struct LoginScreen: View {
                                 .resizable()
                                 .frame(width: 32, height: 32)
                         }
-                        .frame(width: 60, height: 60)
-                        .background(Color.white)
-                        .cornerRadius(12)
+                        .frame(width: 70, height: 22)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue.opacity(0.1))
+                        .font(.headline)
+                        .cornerRadius(15)
+                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
                     }
-
-                    Divider().padding()
-
+                    .padding(.top,-10)
+                    
+                    VStack {
                     NavigationLink(destination: MainTabView(), isActive: $goToTaskManager) {
                         EmptyView()
                     }
-
+                    
                     if isUnlocked {
                         Button("Go to Task Manager") {
                             goToTaskManager = true
@@ -128,10 +136,12 @@ struct LoginScreen: View {
                         }
                         .frame(width: 250)
                         .padding()
-                        .background(Color.purple)
-                        .foregroundColor(.white)
+                        .background(Color.purple.opacity(0.3))
+                        .foregroundColor(.black.opacity(0.8))
                         .cornerRadius(12)
                     }
+                }   .padding(.top, -10)
+                    
                 }
                 .padding()
             }

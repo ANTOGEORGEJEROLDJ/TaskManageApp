@@ -234,6 +234,8 @@
 		4E1FA0012DF173B700254457 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4E1FA0252DF1825F00254457 /* Manager */,
+				4E1FA0302DF1961800254457 /* Team */,
 				4E1FA02E2DF18B8500254457 /* MainTabView.swift */,
 				4E1FA0042DF173B700254457 /* ContentView.swift */,
 				4E1FA0052DF173B700254457 /* CustomTextField.swift */,
@@ -246,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				4E1FA0162DF1743A00254457 /* LoginScreen */,
-				4E1FA01D2DF1784600254457 /* HomeProjectList */,
 				4E1FA0072DF173B700254457 /* ProfileView.swift */,
 				4E1FA0262DF185B300254457 /* TaskHistoryView.swift */,
 			);
@@ -281,19 +282,10 @@
 		4E1FA01C2DF1782800254457 /* TaskCreateView */ = {
 			isa = PBXGroup;
 			children = (
-				4E1FA01A2DF1759200254457 /* TaskCreateView.swift */,
 				4E1FA0232DF181D700254457 /* TaskDetailView.swift */,
+				4E1FA01E2DF1787200254457 /* ProjectListView.swift */,
 			);
 			path = TaskCreateView;
-			sourceTree = "<group>";
-		};
-		4E1FA01D2DF1784600254457 /* HomeProjectList */ = {
-			isa = PBXGroup;
-			children = (
-				4E1FA0302DF1961800254457 /* Team */,
-				4E1FA0252DF1825F00254457 /* Manager */,
-			);
-			path = HomeProjectList;
 			sourceTree = "<group>";
 		};
 		4E1FA0202DF179E700254457 /* CoreData */ = {
@@ -308,7 +300,7 @@
 		4E1FA0252DF1825F00254457 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				4E1FA01E2DF1787200254457 /* ProjectListView.swift */,
+				4E1FA01A2DF1759200254457 /* TaskCreateView.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
