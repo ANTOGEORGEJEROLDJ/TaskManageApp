@@ -22,6 +22,7 @@
 		4E1FA0222DF17A0200254457 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0212DF17A0200254457 /* PersistenceController.swift */; };
 		4E1FA0242DF181D700254457 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0232DF181D700254457 /* TaskDetailView.swift */; };
 		4E1FA0272DF185B300254457 /* TaskHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA0262DF185B300254457 /* TaskHistoryView.swift */; };
+		4E1FA02F2DF18B8500254457 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FA02E2DF18B8500254457 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		4E1FA0212DF17A0200254457 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		4E1FA0232DF181D700254457 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		4E1FA0262DF185B300254457 /* TaskHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHistoryView.swift; sourceTree = "<group>"; };
+		4E1FA02E2DF18B8500254457 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -123,7 +125,9 @@
 		4E1F9FFD2DF173B700254457 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4E1FA0082DF173B700254457 /* TaskManagementAppApp.swift */,
 				4E1FA0202DF179E700254457 /* CoreData */,
+				4E1FA02E2DF18B8500254457 /* MainTabView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,7 +179,6 @@
 				4E1FA0002DF173B700254457 /* Services */,
 				4E1F9FFF2DF173B700254457 /* Resources */,
 				4E1FA0032DF173B700254457 /* Assets.xcassets */,
-				4E1FA0082DF173B700254457 /* TaskManagementAppApp.swift */,
 			);
 			path = TaskManagementApp;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				4E1FA00E2DF173B700254457 /* profileScreen.swift in Sources */,
 				4E1FA0132DF1740400254457 /* TimeTracker.swift in Sources */,
 				4E1FA00F2DF173B700254457 /* TaskManagementAppApp.swift in Sources */,
+				4E1FA02F2DF18B8500254457 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

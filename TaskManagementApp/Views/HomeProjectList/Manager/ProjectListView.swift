@@ -9,42 +9,43 @@
 import SwiftUI
 import CoreData
 
+// MARK: - ProjectListView
 struct ProjectListView: View {
     @FetchRequest(
         entity: Task.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \Task.deadline, ascending: true)]
     ) var tasks: FetchedResults<Task>
-
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(tasks) { task in
-                    VStack(alignment: .leading, spacing: 8) {
+        List {
+            ForEach(tasks) { task in
+                NavigationLink(destination: TaskDetailView(task: task)) {
+                    VStack(alignment: .leading, spacing: 6) {
                         Text(task.projectName ?? "No Project")
                             .font(.headline)
                         Text(task.taskTitle ?? "No Title")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
-
+                        
                         HStack {
                             Label(task.category ?? "Category", systemImage: "tag.fill")
                                 .font(.caption)
                                 .foregroundColor(.blue)
-
+                            
                             Spacer()
-
-                            Label(formatDate(task.deadline), systemImage: "calendar")
+                            
+                            Text(formatDate(task.deadline))
                                 .font(.caption)
                                 .foregroundColor(.gray)
                         }
                     }
-                    .padding(.vertical, 8)
+                    .padding(.vertical, 6)
                 }
             }
-            .navigationTitle("Project Tasks")
         }
+        .navigationTitle("Project Tasks")
     }
-
+    
     private func formatDate(_ date: Date?) -> String {
         guard let date = date else { return "N/A" }
         let formatter = DateFormatter()
@@ -53,8 +54,3 @@ struct ProjectListView: View {
         return formatter.string(from: date)
     }
 }
-
-//#Preview {
-//    ProjectListView()
-//        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-//}

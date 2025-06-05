@@ -8,58 +8,62 @@
 import SwiftUI
 import CoreData
 
+// MARK: - TaskDetailView
 struct TaskDetailView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
     @ObservedObject var task: Task
-
+    @Environment(\.managedObjectContext) var viewContext
+    
     @State private var selectedStatus: String
     @State private var timer: Timer?
     @State private var elapsedTime: TimeInterval = 0
-
+    
     let statusOptions = ["Not Started", "In Progress", "Completed", "On Hold"]
-
+    
     init(task: Task) {
-        _task = ObservedObject(wrappedValue: task)
+        self.task = task
         _selectedStatus = State(initialValue: task.status ?? "Not Started")
         if let startTime = task.startTime {
             _elapsedTime = State(initialValue: Date().timeIntervalSince(startTime))
         }
     }
-
+    
     var body: some View {
         Form {
             Section(header: Text("Task Info")) {
                 Text("Project: \(task.projectName ?? "N/A")")
                 Text("Title: \(task.taskTitle ?? "N/A")")
                 Text("Deadline: \(formattedDate(task.deadline))")
-                Text("Category: \(task.category ?? "")")
+                Text("Category: \(task.category ?? "N/A")")
             }
-
             Section(header: Text("Status")) {
                 Picker("Select Status", selection: $selectedStatus) {
-                    ForEach(statusOptions, id: \.self) {
-                        Text($0)
+                    ForEach(statusOptions, id: \.self) { status in
+                        Text(status)
                     }
                 }
-                .onChange(of: selectedStatus) { newValue in
-                    updateStatus(to: newValue)
-                }
+                .pickerStyle(.segmented)
+                .onChange(of: selectedStatus, perform: updateStatus)
             }
-
             Section(header: Text("Timer")) {
                 Text("Elapsed Time: \(formatTime(elapsedTime))")
+                    .font(.headline)
+                    .foregroundColor(.green)
             }
         }
         .navigationTitle("Task Details")
         .onDisappear {
             timer?.invalidate()
         }
+        .onAppear {
+            if selectedStatus == "In Progress" {
+                startTimer()
+            }
+        }
     }
-
+    
     private func updateStatus(to newStatus: String) {
         task.status = newStatus
-
+        
         switch newStatus {
         case "In Progress":
             task.startTime = Date()
@@ -73,14 +77,10 @@ struct TaskDetailView: View {
         default:
             stopTimer()
         }
-
-        do {
-            try viewContext.save()
-        } catch {
-            print("Failed to update status: \(error)")
-        }
+        
+        saveContext()
     }
-
+    
     private func startTimer() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
@@ -89,23 +89,31 @@ struct TaskDetailView: View {
             }
         }
     }
-
+    
     private func stopTimer() {
         timer?.invalidate()
         timer = nil
     }
-
+    
+    private func saveContext() {
+        do {
+            try viewContext.save()
+        } catch {
+            print("Failed to save context: \(error.localizedDescription)")
+        }
+    }
+    
     private func formattedDate(_ date: Date?) -> String {
-        guard let date else { return "N/A" }
+        guard let date = date else { return "N/A" }
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .short
         return formatter.string(from: date)
     }
-
+    
     private func formatTime(_ time: TimeInterval) -> String {
-        let minutes = Int(time) / 60
-        let seconds = Int(time) % 60
-        return String(format: "%02d:%02d", minutes, seconds)
+        let mins = Int(time) / 60
+        let secs = Int(time) % 60
+        return String(format: "%02d:%02d", mins, secs)
     }
 }

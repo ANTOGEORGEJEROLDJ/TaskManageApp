@@ -8,71 +8,67 @@
 import SwiftUI
 import CoreData
 
+// MARK: - TaskCreateView
 struct TaskCreateView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
+    @Environment(\.managedObjectContext) var viewContext
+    @EnvironmentObject var session: SessionManager
+    
     @State private var projectName = ""
     @State private var taskTitle = ""
     @State private var deadline = Date()
     @State private var selectedCategory = "Development"
     @State private var showAlert = false
-
+    
     let categories = ["Development", "Design", "Testing", "Documentation", "Research"]
-
+    
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Project Details")) {
-                    TextField("Project Name", text: $projectName)
-                    TextField("Task Title", text: $taskTitle)
-                }
-
-                Section(header: Text("Deadline")) {
-                    DatePicker("Select Date & Time", selection: $deadline, displayedComponents: [.date, .hourAndMinute])
-                }
-
-                Section(header: Text("Category")) {
-                    Picker("Select Category", selection: $selectedCategory) {
-                        ForEach(categories, id: \.self) { category in
-                            Text(category)
-                        }
-                    }
-                    .pickerStyle(.menu)
-                }
-
-                Section {
-                    Button(action: {
-                        saveTask()
-                    }) {
-                        HStack {
-                            Spacer()
-                            Text("Create Task")
-                                .bold()
-                            Spacer()
-                        }
-                    }
-                    .foregroundColor(.white)
-                    .listRowBackground(Color.blue)
-                }
+        Form {
+            Section(header: Text("Project Details")) {
+                TextField("Project Name", text: $projectName)
+                TextField("Task Title", text: $taskTitle)
             }
-            .navigationTitle("Create Task")
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Task Saved"),
-                      message: Text("Successfully created task '\(taskTitle)'"),
-                      dismissButton: .default(Text("OK")))
+            Section(header: Text("Deadline")) {
+                DatePicker("Select Date & Time", selection: $deadline, displayedComponents: [.date, .hourAndMinute])
+            }
+            Section(header: Text("Category")) {
+                Picker("Select Category", selection: $selectedCategory) {
+                    ForEach(categories, id: \.self) { cat in
+                        Text(cat)
+                    }
+                }
+                .pickerStyle(MenuPickerStyle())
+            }
+            
+            Section {
+                Button("Create Task") {
+                    saveTask()
+                }
+                .frame(maxWidth: .infinity)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(12)
             }
         }
+        .navigationTitle("Create Task")
+        .alert("Task Saved", isPresented: $showAlert, actions: {
+            Button("OK") {}
+        }, message: {
+            Text("Successfully created task '\(taskTitle)'")
+        })
     }
-
+    
     private func saveTask() {
         guard !projectName.isEmpty, !taskTitle.isEmpty else { return }
-
         let newTask = Task(context: viewContext)
         newTask.projectName = projectName
         newTask.taskTitle = taskTitle
         newTask.deadline = deadline
         newTask.category = selectedCategory
-
+        newTask.status = "Not Started"
+        newTask.duration = 0
+        newTask.id = UUID()
+        
         do {
             try viewContext.save()
             showAlert = true
@@ -81,12 +77,7 @@ struct TaskCreateView: View {
             deadline = Date()
             selectedCategory = "Development"
         } catch {
-            print("❌ Failed to save task: \(error.localizedDescription)")
+            print("Error saving task: \(error.localizedDescription)")
         }
     }
 }
-
-//#Preview {
-//    TaskCreateView()
-//        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-//}

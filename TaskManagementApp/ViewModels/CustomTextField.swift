@@ -7,18 +7,17 @@
 
 import SwiftUI
 
+// MARK: - CustomTextField (from your code)
 struct CustomTextField: View {
-    
     var icon: String
     var placeHolder: String
     @Binding var text: String
     
     var body: some View {
-        HStack{
+        HStack {
             Image(systemName: icon)
                 .foregroundColor(.gray)
                 .frame(width: 30)
-            
             TextField(placeHolder, text: $text)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
@@ -28,4 +27,3 @@ struct CustomTextField: View {
         .cornerRadius(12)
     }
 }
-
