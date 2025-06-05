@@ -55,6 +55,7 @@
 		4E6DC12A2DF1C8A00074936E /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 4E6DC1292DF1C8A00074936E /* GoogleSignIn */; };
 		4E6DC12C2DF1C8A00074936E /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4E6DC12B2DF1C8A00074936E /* GoogleSignInSwift */; };
 		4E6DC12F2DF1CF090074936E /* AppleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6DC12E2DF1CF090074936E /* AppleSignInManager.swift */; };
+		4E6DC1312DF1DB430074936E /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6DC1302DF1DB430074936E /* NotificationModel.swift */; };
 		51F1082060A3E1B6DC9E228A /* Pods_TaskManagementApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E5DD12996FC2A53E1BA0F1 /* Pods_TaskManagementApp.framework */; };
 		FBBA0B442E4089C6891B8114 /* Pods_TaskManagementAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7174E988CC020F9994CB202 /* Pods_TaskManagementAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		4E6DC1272DF1C71C0074936E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4E6DC12D2DF1CE0D0074936E /* TaskManagementApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskManagementApp.entitlements; sourceTree = "<group>"; };
 		4E6DC12E2DF1CF090074936E /* AppleSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInManager.swift; sourceTree = "<group>"; };
+		4E6DC1302DF1DB430074936E /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		599DB0059727EB5972BB697E /* Pods-TaskManagementAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManagementAppTests.release.xcconfig"; path = "Target Support Files/Pods-TaskManagementAppTests/Pods-TaskManagementAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		858CBBDEBB0034A8676ED5A3 /* Pods-TaskManagementApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManagementApp.debug.xcconfig"; path = "Target Support Files/Pods-TaskManagementApp/Pods-TaskManagementApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8949683F6D6C53DAEA70078C /* Pods-TaskManagementAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManagementAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TaskManagementAppTests/Pods-TaskManagementAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				4E1FA02E2DF18B8500254457 /* MainTabView.swift */,
 				4E1FA0042DF173B700254457 /* ContentView.swift */,
 				4E1FA0052DF173B700254457 /* CustomTextField.swift */,
+				4E6DC1302DF1DB430074936E /* NotificationModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				4E1FA00E2DF173B700254457 /* ProfileView.swift in Sources */,
 				4E1FA0132DF1740400254457 /* TimeTracker.swift in Sources */,
 				4E1FA00F2DF173B700254457 /* TaskManagementAppApp.swift in Sources */,
+				4E6DC1312DF1DB430074936E /* NotificationModel.swift in Sources */,
 				4E1FA02F2DF18B8500254457 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,11 +780,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskManagementApp/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "This app uses Face ID to unlock and access task management features securely.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -807,11 +813,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskManagementApp/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "This app uses Face ID to unlock and access task management features securely.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
